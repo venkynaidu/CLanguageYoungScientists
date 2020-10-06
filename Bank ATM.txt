@@ -1,0 +1,66 @@
+// ATM machine example
+#include <stdio.h>
+
+int main() {
+    int Balance=5000,Ubalance,PIN=1234,UPIN,option,oldpin,newpin;
+    printf("Enter PIN number");
+    scanf("%d",&UPIN);
+    if(PIN==UPIN)
+    {
+        printf("1. Withdrawl      2.Balance\n");
+        printf("3. Pin Change     4. Mini Statement\n");
+        printf("Select your option to process....\n");
+        scanf("%d",&option);
+        if(option==1)
+        {
+            printf("Enter amount to withdraw");
+            scanf("%d",&Ubalance);
+            if(Ubalance<=Balance)
+            {
+                printf("Your transaction is in process..Please collect ur cash...\n");
+                Balance=Balance-Ubalance;
+                printf("Your account balance is:%d",Balance);
+            }
+            else
+            {
+                printf("Insufficient Funds....");
+            }
+        }
+        else if(option==2)
+        {
+            printf("Balance is:%d",Balance);
+        }
+        else if(option==3)
+        {
+            printf("Enter your old pin");
+            scanf("%d",&oldpin);
+            if(oldpin==PIN)
+            {
+                printf("Enter new pin to change");
+                scanf("%d",&newpin);
+                PIN=newpin;
+                printf("Your pin changed successfully...");
+                printf("%d",PIN);
+            }
+            else
+            {
+                printf("Wrong pin please try again...");
+            }
+        }
+        else if(option==4)
+        {
+            printf("For mini statement contact your bank....");
+        }
+        else
+        {
+            printf("Wrong option... please select 1 or 2 or 3 or 4 only");
+        }
+    }
+    else
+    {
+        printf("Wrong PIN");
+    }
+    
+    
+    return 0;
+}
