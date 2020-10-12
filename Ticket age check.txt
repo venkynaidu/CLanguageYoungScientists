@@ -1,0 +1,41 @@
+// Online ticket booking program
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+    char name[20],pswd[20];
+    int age;
+    printf("Enter username:");
+    scanf("%s",&name);
+    if (strcmp(name,"Venky")==0)
+    {
+        printf("Enter password:");
+        scanf("%s",&pswd);
+        if(strcmp(pswd,"Venky@123")==0)
+        {
+            printf("Enter ur age to book this Movie:");
+            scanf("%d",&age);
+            if(age<=18)
+            {
+                printf("You are not eligible for this Movie...");
+                
+            }
+            else
+            {
+                printf("You r ticket booked....");
+            }
+            
+        }
+        else
+        {
+            printf("Wrong password");
+        }
+    }
+    else
+    {
+        printf("Wrong username");
+    }
+    
+    
+    return 0;
+}
