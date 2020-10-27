@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int a,b;
+    char symbol;
+    printf("Enter operation:");
+    scanf("%d %c %d",&a,&symbol,&b);
+    switch(symbol)
+    {
+        case '+':
+                printf("Add is:%d",a+b);
+                break;
+        case '-':
+                printf("Sub is:%d",a-b);
+                break;
+        case '*':
+                printf("Mult is:%d",a*b);
+                break;
+        case '/':
+                printf("Div is:%f",a/b);
+                break;
+        default:
+            printf("Entered wrong operation...");
+    }
+    
+    return 0;
+}
