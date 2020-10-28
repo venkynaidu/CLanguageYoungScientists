@@ -1,0 +1,42 @@
+//program to check the character type vowel, consonant,Special character
+#include<stdio.h>
+void main()
+{
+
+    char ch;
+    printf("Enter character to check.....");
+    scanf("%c",&ch);
+    if((ch>='A')&&(ch<='Z')||(ch>='a')&&(ch<='z'))
+    {
+        switch(ch)
+        {
+
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+            printf("Vowel......");
+            break;
+        default:
+            printf("Consonant.....");
+        }
+
+    }
+    else if(ch>='0'&&ch<='9')
+    {
+        printf("Character is NUmmber.....");
+    }
+    else
+    {
+        printf("Special Character.....");
+    }
+
+    }
+
+
